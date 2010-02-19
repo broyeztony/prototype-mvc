@@ -7,7 +7,7 @@
 	public class View
 	{
 		
-		private var _instance:View;
+		private var static _instance:View;
 		
 		public function View() 
 		{

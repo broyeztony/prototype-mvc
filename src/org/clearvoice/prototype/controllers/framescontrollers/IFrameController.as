@@ -7,10 +7,10 @@
 	 */
 	public interface IFrameController 
 	{
-		function onEnter():void;
-		function onExit():void;
-		function onActivate():void;
-		function onDeActivate():void;
+		public function onEnter():void;
+		public function onExit():void;
+		public function onActivate():void;
+		public function onDeActivate():void;
 	}
 	
 }

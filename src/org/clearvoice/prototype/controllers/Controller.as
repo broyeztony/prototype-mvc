@@ -7,7 +7,7 @@
 	 */
 	public class Controller
 	{
-		private var _instance:Controller;
+		private var static _instance:Controller;
 		private var _framesControllers:Vector.<IFrameController>;
 		public function Controller() 
 		{
