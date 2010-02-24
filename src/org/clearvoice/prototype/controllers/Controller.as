@@ -9,9 +9,9 @@
 	{
 		private var static _instance:Controller;
 		private var _framesControllers:Vector.<IFrameController>;
-		public function Controller() 
+		public function Controller( pSecure:SingletonSecure ) 
 		{
-			
+			if ( pSecure == null ) throw new Error( "Use Controller.getInstance() instead." );
 		}
 		
 		public function init():void {
@@ -20,7 +20,7 @@
 		}
 		
 		public static function getInstance():Controller{
-			if (!_instance) _instance = new Controller();
+			if (!_instance) _instance = new Controller( new SingletonSecure() );
 			return _instance;
 		}
 		
@@ -72,3 +72,5 @@
 	}
 
 }
+
+internal class SingletonSecure { }
